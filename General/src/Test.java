@@ -7,6 +7,15 @@ public class Test {
 	static Date start;
 	static Date end;
 	static SimpleDateFormat sdf;
+
+	public static float reverse(float num){
+		float rev = 0;
+		while(num !=0){
+			rev = (rev*10) + (num%10);
+			num = num / 10;
+		}
+		return rev;
+	}
 	
 	public static void main(String a[]) throws Exception{
 		
@@ -23,7 +32,11 @@ public class Test {
 		System.out.println(isWithin("2007-12-02"));
 		System.out.println(isWithin("2008-02-01"));
 		
-		
+//		System.out.print("Reverse :" + reverse((float) 123.50));
+		int i = 2, j =3;
+		String s = "++++";
+		String temp = s.substring(0,i)+"--"+s.substring(j+1,s.length());
+		System.out.print(s.substring(0,i)+"--"+s.substring(j+1,s.length()) + " " + s);
 		
 	}
 	

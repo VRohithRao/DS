@@ -7,7 +7,7 @@ import java.util.Iterator;
 import java.util.List;
 
 
-public class PreScreen {
+public class DependencyPackages {
 	
 	static List<PackageDependency> packageDependencies = new ArrayList<PackageDependency>();
 	static List<Package> buildOrderList = new ArrayList<Package>();
@@ -94,7 +94,7 @@ public class PreScreen {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		try {
-			FileInputStream fis = new FileInputStream("C:/Users/Rohith/workspace/LinkedList/src/input.txt");
+			FileInputStream fis = new FileInputStream("C:/Users/Rohith Vallu/IdeaProjects/DS/General/src/input.txt");
 			
 			// Construct BufferedReader from InputSteamReader
 			BufferedReader br = new BufferedReader(new InputStreamReader(fis));
@@ -117,61 +117,18 @@ public class PreScreen {
 					
 				se.addDependency(st);
 					
-				//packageDependencies.add(new PackageDependency(st, se));
+				//packageDependencies.add(new SortBasedOnID(st, se));
 				
 			}
-//			Package A = new Package("A");
-//			Package B = new Package("B");
-//			Package C = new Package("C");
-//			Package D = new Package("D");
-//			Package E = new Package("A");
-//			B.addDependency(A);
-//			C.addDependency(A);
-//			D.addDependency(A);
-//			C.addDependency(B);
-//			D.addDependency(B);
-//			D.addDependency(C);
-//			allPackages.add(A);
-//			allPackages.add(B);
-//			allPackages.add(C);
-//			allPackages.add(D);
-			
-			/*Package seven = new Package("7");
-		    Package five = new Package("5");
-		    Package three = new Package("3");
-		    Package eleven = new Package("11");
-		    Package eight = new Package("8");
-		    Package two = new Package("2");
-		    Package nine = new Package("9");
-		    Package ten = new Package("10");
-		    seven.addDependency(eleven);
-		    seven.addDependency(eight);
-		    five.addDependency(eleven);
-		    three.addDependency(eight);
-		    three.addDependency(ten);
-		    eleven.addDependency(two);
-		    eleven.addDependency(nine);
-		    eleven.addDependency(ten);
-		    eight.addDependency(nine);
-		    
-		    allPackages.add(seven);
-		    allPackages.add(eight);
-		    allPackages.add(two);
-		    allPackages.add(three);
-		    allPackages.add(five);
-		    allPackages.add(nine);
-		    allPackages.add(ten);
-		    allPackages.add(eleven);*/
-			
-		    
+
 			
 			br.close();
 		}
 		catch (Exception e) {
 			System.out.println(e);
 		}
-		
-		PreScreen myObject = new PreScreen();
+
+		DependencyPackages myObject = new DependencyPackages();
 		myObject.validBuildOrder(packageDependencies);
 	}
 }
