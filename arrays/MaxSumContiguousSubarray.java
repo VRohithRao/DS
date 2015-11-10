@@ -3,7 +3,7 @@
  * the sum of the previous n-1 elements if nth element is greater than the sum."
 */
 
-public class LargestSumContiguousSubarray {
+public class MaxSumContiguousSubarray {
 	public static void subarraySimple(int[] a){
 		int max_so_far = a[0], max_here = a[0];
 		
@@ -40,13 +40,30 @@ public class LargestSumContiguousSubarray {
 			System.out.print(temp[m] + " ");
 		}
 	}
+
+	public static int maxSubArray(int[] A) {
+		int max = A[0];
+		int[] sum = new int[A.length];
+		sum[0] = A[0];
+
+		for (int i = 1; i < A.length; i++) {
+			sum[i] = Math.max(A[i], sum[i - 1] + A[i]);
+			max = Math.max(max, sum[i]);
+		}
+
+		return max;
+	}
+
 	public static void main(String args[]){
 		int j[] =  {-2, -3, 4, -1, -2, 1, 5, -3};
 		int i[] =  {-2,-4,5,-2,3,-5,6};
+		int k[] = {-1,-2,-1,-3};
 		subarraySimple(i);
 		System.out.println();
 		subarrayDP(j);
 		System.out.println();
 		subarrayDP(i);
+		System.out.println();
+		subarrayDP(k);
 	}
 }

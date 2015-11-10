@@ -44,9 +44,10 @@ public class MajorityElement {
 	}
 	public static void main(String args[]){
 		MajorityElement me = new MajorityElement();
-		int[] num =  {3, 3, 4, 2,4, 2, 4};
+		int[] num1 = {1, 2, 3, 4, 4, 4, 4};
+		int[] num =  {4, 3, 4, 1,4, 2, 4};
 		int n = me.majorityElementBySort(num);
-		int m = me.majorityElementByVote(num);
+		int m = me.majorityElementByVote(num1);
 		System.out.println(n+" : "+m);
 	}
 }
