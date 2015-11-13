@@ -1,4 +1,4 @@
-/*
+package DynamicProgramming;/*
  * The changing condition for dynamic programming is "We should ignore
  * the sum of the previous n-1 elements if nth element is greater than the sum."
 */
